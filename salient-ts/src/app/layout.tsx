@@ -6,11 +6,11 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s - NEWB',
+    default: '$NEWB - The Next Generation of DeFi',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Most DeFi projects are built on top of Ethereum. We are building on top of Solana.',
 }
 
 const inter = Inter({
@@ -22,7 +22,7 @@ const inter = Inter({
 const lexend = Lexend({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-lexend', 
 })
 
 export default function RootLayout({
