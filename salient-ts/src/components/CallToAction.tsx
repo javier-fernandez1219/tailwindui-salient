@@ -27,6 +27,9 @@ export function CallToAction() {
         unoptimized
       />
       <Container className="relative">
+        <h2 className="text-4xl font-bold text-center text-white mb-12">
+          Our Roadmap
+        </h2>
         <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
           <li className="mb-10 ms-6">            
               <button 
@@ -39,15 +42,15 @@ export function CallToAction() {
                     </svg>
                 </span>
                 <div>
-                  <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="flex items-center mb-1 text-lg font-semibold text-white dark:text-white">
                     Phase 1: Launch & Community Building 
                     <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Current</span>
                   </h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Initial Launch Phase</time>
+                  <time className="block mb-2 text-sm font-normal leading-none text-white dark:text-white">Initial Launch Phase</time>
                 </div>
               </button>
               {openPhase === 1 && (
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 mt-2">
+                <p className="mb-4 text-base font-normal text-white mt-2">
                   • Fair launch on WAGMI.Best<br/>
                   • Setup socials (Website V1, Twitter, Telegram, Discord, Reddit)<br/>
                   • Run first marketing campaign (Dex Ads/Banner)<br/>
@@ -66,12 +69,12 @@ export function CallToAction() {
                     </svg>
                 </span>
                 <div>
-                  <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Phase 2: Growth & Recognition</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Marketing & Visibility Phase</time>
+                  <h3 className="mb-1 text-lg font-semibold text-white dark:text-white">Phase 2: Growth & Recognition</h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-white">Marketing & Visibility Phase</time>
                 </div>
               </button>
               {openPhase === 2 && (
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400 mt-2">
+                <p className="text-base font-normal text-white dark:text-white mt-2">
                   • Hire full time artist to make memes<br/>
                   • List on Coin Gecko, Moontok, Coin mooner<br/>
                   • Update token information and rebrand logo on Basescan/CB wallet
@@ -89,12 +92,12 @@ export function CallToAction() {
                     </svg>
                 </span>
                 <div>
-                  <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Phase 3: Expansion & Development</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Scaling & Innovation Phase</time>
+                  <h3 className="mb-1 text-lg font-semibold text-white dark:text-white">Phase 3: Expansion & Development</h3>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-white">Scaling & Innovation Phase</time>
                 </div>
               </button>
               {openPhase === 3 && (
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400 mt-2">
+                <p className="text-base font-normal text-white dark:text-white mt-2">
                   • Begin Donating to STEM Education Charities at 1, 2, 5, 10 Million MC<br/>
                   • Hire a full time Animator to make animations<br/>
                   • Launch second marketing campaign (Youtubers/KOLS/Partnerships)<br/>
@@ -106,18 +109,6 @@ export function CallToAction() {
               )}
           </li>
         </ol>
-        <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Get started today
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
-            It’s time to take control of your books. Buy our software so you can
-            feel like you’re doing something productive.
-          </p>
-          <Button href="/register" color="white" className="mt-10">
-            Get 6 months free
-          </Button>
-        </div>
       </Container>
     </section>
   )
