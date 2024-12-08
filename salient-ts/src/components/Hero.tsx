@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
+import dexscreenpng from '@/images/logos/dexscreenpng.svg'
+import dextoolspng from '@/images/logos/dextoolspng.svg'
+import discordpng from '@/images/logos/discordpng.svg'
+import telegrampng from '@/images/logos/telegrampng.svg'
+import xpng from '@/images/logos/xpng.svg'
+import lumitypng from '@/images/logos/lumitypng.svg'
 
 export function Hero() {
   return (
@@ -56,14 +56,14 @@ export function Hero() {
         >
           {[
             [
-              { name: 'Transistor', logo: logoTransistor },
-              { name: 'Tuple', logo: logoTuple },
-              { name: 'StaticKit', logo: logoStaticKit },
+              { name: 'DexScreener', logo: dexscreenpng },
+              { name: 'DexTools', logo: dextoolspng },
+              { name: 'Discord', logo: discordpng },
             ],
             [
-              { name: 'Mirage', logo: logoMirage },
-              { name: 'Laravel', logo: logoLaravel },
-              { name: 'Statamic', logo: logoStatamic },
+              { name: 'Telegram', logo: telegrampng },
+              { name: 'X', logo: xpng },
+              { name: 'Lumity', logo: lumitypng },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
