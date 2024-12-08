@@ -14,27 +14,21 @@ import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Download a Wallet',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      'Get started with crypto by downloading a secure digital wallet. We recommend MetaMask or Trust Wallet - your safe gateway to Web3.',
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Add Funds',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      'Easily convert your traditional currency to crypto through our trusted payment partners. Fast, secure, and hassle-free onboarding.',
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Purchase with ALB',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
-  },
-  {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      'Use ALB tokens to make secure purchases across our platform. Experience seamless transactions with lower fees and instant settlements.',
     image: screenshotReporting,
   },
 ]

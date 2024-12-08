@@ -14,10 +14,8 @@ export default function Home() {
       <main className="relative">
         <Hero />
         <PrimaryFeatures />
-        <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
-        <Pricing />
         <Faqs />
       </main>
       <Footer />
