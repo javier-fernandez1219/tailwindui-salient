@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 import { Button } from '@/components/Button'
@@ -10,8 +12,39 @@ import xpng from '@/images/logos/xpng.svg'
 import lumitypng from '@/images/logos/lumitypng.svg'
 
 export function Hero() {
+  // Create an array of logo positions
+  const logoPositions = [
+    { top: '10%', left: '5%' },
+    { top: '60%', left: '15%' },
+    { top: '20%', left: '85%' },
+    { top: '75%', left: '75%' },
+    { top: '35%', left: '50%' },
+    { top: '85%', left: '35%' },
+  ];
+
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32">
+    <Container className="pb-16 pt-20 text-center lg:pt-32 relative">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {[dexscreenpng, dextoolspng, discordpng, telegrampng, xpng, lumitypng].map((logo, index) => (
+          <div 
+            key={index} 
+            className="absolute w-24 h-24 cursor-pointer transition-all duration-300"
+            style={{ 
+              top: logoPositions[index].top, 
+              left: logoPositions[index].left,
+              transform: `rotate(${Math.random() * 20 - 10}deg)`,
+            }}
+          >
+            <Image
+              src={logo}
+              alt=""
+              className="w-full h-full object-contain opacity-[0.5] blur-sm hover:blur-none transition-all duration-300"
+              unoptimized
+            />
+          </div>
+        ))}
+      </div>
+
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Accounting{' '}
         <span className="relative whitespace-nowrap text-blue-600">
@@ -29,7 +62,7 @@ export function Hero() {
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
         Most bookkeeping software is accurate, but hard to use. We make the
-        opposite trade-off, and hope you don’t get audited.
+        opposite trade-off, and hope you don't get audited.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="/register">Get 6 months free</Button>
@@ -73,7 +106,12 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <Image 
+                      src={company.logo} 
+                      alt={company.name} 
+                      unoptimized 
+                      className="blur-sm hover:blur-none transition-all duration-300"
+                    />
                   </li>
                 ))}
               </ul>
