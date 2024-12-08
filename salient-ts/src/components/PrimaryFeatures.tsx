@@ -11,25 +11,27 @@ import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotWallet from '@/images/screenshots/wallet.gif'
+import screenshotSwap from '@/images/screenshots/swap.gif'
 
 const features = [
   {
-    title: 'Download a Wallet',
+    title: 'Download a Coinbase Wallet',
     description:
-      'Get started with crypto by downloading a secure digital wallet. We recommend MetaMask or Trust Wallet - your safe gateway to Web3.',
-    image: screenshotPayroll,
+      'Get started with crypto by signing up for Coinbase Wallet. Make sure to store your wallet information in a safe place where you will not lose it. We reccomend Coinbase Wallet for its user friendliness and security.',
+    image: screenshotWallet,
   },
   {
-    title: 'Add Funds',
+    title: 'Onramp your funds into Base Ethereum',
     description:
-      'Easily convert your traditional currency to crypto through our trusted payment partners. Fast, secure, and hassle-free onboarding.',
+      'Easily convert your Fiat currency to Ethereum the native token to Base Network.',
     image: screenshotExpenses,
   },
   {
-    title: 'Purchase with ALB',
+    title: 'Swap your ETH for $NEWB',
     description:
-      'Use ALB tokens to make secure purchases across our platform. Experience seamless transactions with lower fees and instant settlements.',
-    image: screenshotReporting,
+      'Using AlienBase you can swap your ETH for $NEWB at the cheapest prices on Base.',
+    image: screenshotSwap,
   },
 ]
 
@@ -70,11 +72,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            How to buy $NEWB
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            Step by step guide on how to buy $NEWB.
           </p>
         </div>
         <TabGroup
