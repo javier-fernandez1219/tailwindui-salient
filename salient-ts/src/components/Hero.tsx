@@ -12,7 +12,7 @@ import discordpng from '@/images/logos/discordpng.svg'
 import telegrampng from '@/images/logos/telegrampng.svg'
 import xpng from '@/images/logos/xpng.svg'
 import lumitypng from '@/images/logos/lumitypng.svg'
-import backgroundAuth from '@/images/background-auth.jpg'
+import backgroundAuth from '@/images/starryherobg.png'
 
 export function Hero() {
   // Move logoPositions definition here, before it's used
@@ -103,7 +103,7 @@ export function Hero() {
         }}
       />
       
-      <div className="fixed inset-0 -z-20 bg-white/10" />
+      {/* <div className="fixed inset-0 -z-20 bg-white/[0.01]" /> */}
 
       <div className="absolute inset-0 z-10 overflow-hidden">
         {logoData.map((logo, index) => {
