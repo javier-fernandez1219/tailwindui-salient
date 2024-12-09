@@ -36,12 +36,12 @@ export function Hero() {
 
   // Move logoPositions definition here, before it's used
   const logoPositions = [
-    { top: '20%', left: '5%' }, //DEXSCREENER LOGO
-    { top: '69%', left: '6%' },  //DEXTOOLS LOGO
-    { top: '20%', left: '75%' }, //DISCORD LOGO
-    { top: '45%', left: '75%' }, //TG LOGO
-    { top: '75%', left: '85%' }, //X LOGO 
-    { top: '45%', left: '15%' }, //LUMITYLOGO
+    { top: '15%', left: '10%' }, //DEXSCREENER LOGO
+    { top: '75%', left: '10%' },  //DEXTOOLS LOGO
+    { top: '45%', left: '10%' }, //LUMITYLOGO
+    { top: '45%', left: '83%' }, //TG LOGO
+    { top: '75%', left: '83%' }, //X LOGO 
+    { top: '15%', left: '83%' }, //DISCORD LOGO
   ];
 
   const [positions, setPositions] = useState(() => 
@@ -124,19 +124,19 @@ export function Hero() {
       
       {/* <div className="fixed inset-0 -z-20 bg-white/[0.01]" /> */}
 
-      <div className="absolute inset-0 z-10 overflow-hidden">
+      <div className="absolute inset-0 z-5 overflow-hidden">
         {logoData.map((logo, index) => {
           const animation = animationRefs.current[index];
           
           return (
             <div
               key={index}
-              className={`absolute w-36 h-36 cursor-move ${isDragging && dragItem.current === index ? 'z-50' : 'z-50'}`}
+              className={`absolute w-36 h-36 cursor-pointer ${isDragging && dragItem.current === index ? 'z-[100]' : 'z-[100]'}`}
               style={{ 
                 top: `${positions[index].y}%`,
                 left: `${positions[index].x}%`,
-                animation: isDragging ? 'none' : `float-${index} ${animation.duration}s infinite ease-in-out`,
-                pointerEvents: 'auto'
+                pointerEvents: 'auto',
+                zIndex: 100
               }}
               draggable
               onDragStart={(e) => handleDragStart(e, index)}
@@ -147,19 +147,22 @@ export function Hero() {
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full transform transition-all duration-300 hover:scale-125 blur-sm hover:blur-none"
+                className="block w-full h-full transform transition-all duration-300 hover:scale-125 blur-sm hover:blur-none hover:opacity-100"
                 onClick={(e) => {
                   if (isDragging) {
                     e.preventDefault();
                   }
-                  console.log(`Clicked logo ${index}`);
+                  console.log(`Clicked logo ${index} - ${logo.url}`);
                 }}
-                style={{ pointerEvents: 'auto' }}
+                style={{ 
+                  pointerEvents: 'auto',
+                  zIndex: 100
+                }}
               >
                 <Image
                   src={logo.src}
                   alt=""
-                  className="w-full h-full object-contain opacity-[0.5]"
+                  className="w-full h-full object-contain opacity-[0.5] hover:opacity-100"
                   unoptimized
                 />
               </a>
@@ -168,7 +171,7 @@ export function Hero() {
         })}
       </div>
 
-      <div className="flex justify-center relative z-40">
+      <div className="flex justify-center relative z-10">
         <button 
           onClick={copyToClipboard}
           className="transform transition-all duration-300 hover:scale-110 bg-transparent border-none focus:outline-none relative"

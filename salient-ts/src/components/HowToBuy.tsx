@@ -13,6 +13,7 @@ import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import screenshotWallet from '@/images/screenshots/wallet.gif'
 import screenshotSwap from '@/images/screenshots/swap.gif'
+import howbuynewb from '@/images/avatars/howbuynewb.svg'
 
 const features = [
   {
@@ -24,7 +25,7 @@ const features = [
   {
     title: 'Onramp your funds into Base Ethereum',
     description:
-      'Easily convert your Fiat currency to Ethereum the native token to Base Network.',
+      'Follow the steps on Coinbase Wallet to onramp your funds into Base Ethereum.',
     image: screenshotExpenses,
   },
   {
@@ -35,7 +36,7 @@ const features = [
   },
 ]
 
-export function PrimaryFeatures() {
+export function HowToBuy() {
   let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
     'horizontal',
   )
@@ -70,16 +71,17 @@ export function PrimaryFeatures() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            How to buy $NEWB
-          </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Step by step guide on how to buy $NEWB.
-          </p>
+        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none font-['Chenile_Deluxe'] -mt-8">
+          <Image 
+            src={howbuynewb}
+            alt="How to buy NEWB"
+            width={1000}
+            height={400}
+            className="mx-auto"
+          />
         </div>
         <TabGroup
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          className="mt-1 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
@@ -99,7 +101,7 @@ export function PrimaryFeatures() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg ui-not-focus-visible:outline-none',
+                            'font-["Chenile_Deluxe"] text-2xl ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
                               ? 'text-blue-600 lg:text-white'
                               : 'text-blue-100 hover:text-white lg:text-white',
