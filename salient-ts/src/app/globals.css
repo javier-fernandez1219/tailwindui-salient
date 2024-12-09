@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  perspective: 1000px;
+}
+
+/* Add this for the container that holds your snap sections */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  perspective: 1000px;
+}
+
+/* Add this class to the sections you want to snap to */
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Add these new animation classes */
+.snap-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Different entrance animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Common class for when elements come into view */
+.in-view {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 2s ease-in-out;
+}

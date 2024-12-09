@@ -10,15 +10,26 @@ import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
   return (
-    <>
-      <main className="relative">
+    <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+      <div className="h-screen snap-start">
         <Hero />
+      </div>
+
+      <div className="h-screen snap-start">
         <PrimaryFeatures />
+      </div>
+
+      <div className="h-screen snap-start">
         <CallToAction />
+      </div>
+
+      <div className="h-screen snap-start">
         <Testimonials />
+      </div>
+
+      <div className="h-screen snap-start">
         <Faqs />
-      </main>
-      <Footer />
-    </>
+      </div>
+    </main>
   )
 }

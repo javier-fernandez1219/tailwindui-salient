@@ -3,6 +3,7 @@ import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: {
