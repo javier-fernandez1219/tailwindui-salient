@@ -14,6 +14,7 @@ import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import screenshotWallet from '@/images/screenshots/wallet.gif'
 import screenshotSwap from '@/images/screenshots/swap.gif'
 import howbuynewb from '@/images/avatars/howbuynewb.svg'
+import pic from '@/images/screenshots/pic.png'
 
 const features = [
   {
@@ -26,7 +27,7 @@ const features = [
     title: 'Onramp your funds into Base Ethereum',
     description:
       'Follow the steps on Coinbase Wallet to onramp your funds into Base Ethereum.',
-    image: screenshotExpenses,
+    image: pic,
   },
   {
     title: 'Swap your ETH for $NEWB',
