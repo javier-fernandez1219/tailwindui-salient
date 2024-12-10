@@ -147,7 +147,7 @@ export function Hero() {
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full transform transition-all duration-300 hover:scale-125 blur-sm hover:blur-none hover:opacity-100"
+                className="block w-full h-full transform transition-all duration-300 hover:scale-125 hover:rotate-10 blur-sm hover:blur-none hover:opacity-100"
                 onClick={(e) => {
                   if (isDragging) {
                     e.preventDefault();
@@ -171,7 +171,7 @@ export function Hero() {
         })}
       </div>
 
-      <div className="flex justify-center relative z-10">
+      <div className="flex justify-center relative z-10 mt-20">
         <button 
           onClick={copyToClipboard}
           className="transform transition-all duration-300 hover:scale-110 bg-transparent border-none focus:outline-none relative"
@@ -185,7 +185,7 @@ export function Hero() {
           <Image 
             src={newtonOnBase} 
             alt="Newton on Base" 
-            className="w-130 h-130"
+            className="w-130 h-130 transform transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             width={600}
             height={600}
             onClick={(e) => {
