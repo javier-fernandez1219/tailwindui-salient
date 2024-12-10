@@ -1,10 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import lumityDono from '@/images/screenshots/LumityDonation.png'
 import { Container } from '@/components/Container'
 
 
 
-export function Testimonials() {
+export function Donation() {
   return (
     <section
       id="testimonials"

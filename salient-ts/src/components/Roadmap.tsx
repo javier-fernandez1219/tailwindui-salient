@@ -4,9 +4,10 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-call-to-action.jpg'
+import backgroundImage from '@/images/paperbg.svg'
+import roadmapSvg from '@/images/roadmap.svg'
 
-export function CallToAction() {
+export function Roadmap() {
   const [openPhase, setOpenPhase] = useState<number>(1)
 
   const togglePhase = (phaseNumber: number) => {
@@ -16,7 +17,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-32"
+      className="relative overflow-hidden bg-blue-600 py-8 h-screen"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -27,9 +28,13 @@ export function CallToAction() {
         unoptimized
       />
       <Container className="relative">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">
-          Our Roadmap
-        </h2>
+        <Image 
+          src={roadmapSvg}
+          alt="Roadmap"
+          className="mx-auto mb-8"
+          width={800}
+          height={200}
+        />
         <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
           <li className="mb-10 ms-6">            
               <button 

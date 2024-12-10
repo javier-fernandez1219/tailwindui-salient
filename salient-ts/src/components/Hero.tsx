@@ -11,8 +11,10 @@ import discordpng from '@/images/logos/discordpng.svg'
 import telegrampng from '@/images/logos/telegrampng.svg'
 import xpng from '@/images/logos/xpng.svg'
 import lumitypng from '@/images/logos/lumitypng.svg'
-import backgroundAuth from '@/images/starryherobg.png'
 import newtonOnBase from '@/images/avatars/newtononbase.svg'
+import paperbg from '@/images/paperbg.svg'
+
+
 
 export function Hero() {
   const [copied, setCopied] = useState(false);
@@ -108,22 +110,23 @@ export function Hero() {
     yOffset: 50 - Math.random() * 100,
   })));
 
+  const scrollToHowToBuy = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const howToBuySection = document.getElementById('features');
+    howToBuySection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen pb-16 pt-20 text-center lg:pt-32 relative">
-      <div 
-        className="fixed inset-0 -z-30"
-        style={{
-          backgroundImage: `url(${backgroundAuth.src})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          width: '100vw',
-          height: '100vh',
-        }}
+    <div className="min-h-screen pb-0 pt-20 text-center lg:pt-32 relative bg-blue-600">
+      <Image
+        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+        src={paperbg}
+        alt=""
+        width={2347}
+        height={1244}
+        unoptimized
       />
       
-      {/* <div className="fixed inset-0 -z-20 bg-white/[0.01]" /> */}
-
       <div className="absolute inset-0 z-5 overflow-hidden">
         {logoData.map((logo, index) => {
           const animation = animationRefs.current[index];
@@ -147,7 +150,7 @@ export function Hero() {
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full transform transition-all duration-300 hover:scale-125 hover:rotate-10 blur-sm hover:blur-none hover:opacity-100"
+                className="block w-full h-full transform transition-all duration-300 hover:scale-125 blur-sm hover:blur-none hover:opacity-100 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
                 onClick={(e) => {
                   if (isDragging) {
                     e.preventDefault();
@@ -162,7 +165,7 @@ export function Hero() {
                 <Image
                   src={logo.src}
                   alt=""
-                  className="w-full h-full object-contain opacity-[0.5] hover:opacity-100"
+                  className="w-full h-full object-contain opacity-[0.5] hover:opacity-100 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
                   unoptimized
                 />
               </a>
@@ -186,8 +189,8 @@ export function Hero() {
             src={newtonOnBase} 
             alt="Newton on Base" 
             className="w-130 h-130 transform transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
-            width={600}
-            height={600}
+            width={900}
+            height={900}
             onClick={(e) => {
               e.stopPropagation();
               copyToClipboard();
@@ -205,6 +208,25 @@ export function Hero() {
               </div>
             </div>
           )}
+        </button>
+      </div>
+
+      <div className="absolute top-[90%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce flex justify-center items-center">
+        <button
+          onClick={scrollToHowToBuy}
+          className="p-4 rounded-full transition-all duration-300 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+        >
+          <svg 
+            className="w-8 h-8 text-white"
+            fill="none" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth="2" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
         </button>
       </div>
     </div>

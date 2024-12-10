@@ -1,12 +1,12 @@
-import { CallToAction } from '@/components/CallToAction'
-import { Faqs } from '@/components/Faqs'
+import { Roadmap } from '@/components/Roadmap'
+import { NewbLore } from '@/components/NewbLore'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
 import { HowToBuy } from '@/components/HowToBuy'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-import { Testimonials } from '@/components/Testimonials'
+import { Donation } from '@/components/Donation'
 
 export default function Home() {
   return (
@@ -20,15 +20,15 @@ export default function Home() {
       </div>
 
       <div className="h-screen snap-start">
-        <CallToAction />
+        <Roadmap />
       </div>
 
       <div className="h-screen snap-start">
-        <Testimonials />
+        <Donation />
       </div>
 
       <div className="h-screen snap-start">
-        <Faqs />
+        <NewbLore />
       </div>
     </main>
   )

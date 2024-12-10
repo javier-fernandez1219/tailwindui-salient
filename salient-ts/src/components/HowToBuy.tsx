@@ -6,15 +6,12 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import screenshotWallet from '@/images/screenshots/wallet.gif'
 import screenshotSwap from '@/images/screenshots/swap.gif'
 import howbuynewb from '@/images/avatars/howbuynewb.svg'
 import pic from '@/images/screenshots/pic.png'
+import backgroundImage from '@/images/paperbg.svg'
+
 
 const features = [
   {
@@ -57,18 +54,24 @@ export function HowToBuy() {
     }
   }, [])
 
+  const scrollToNextSection = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const nextSection = document.getElementById('next-section');
+    nextSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-blue-600 py-8 h-screen"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={backgroundImage}
         alt=""
-        width={2245}
-        height={1636}
+        width={2347}
+        height={1244}
         unoptimized
       />
       <Container className="relative">
@@ -82,7 +85,7 @@ export function HowToBuy() {
           />
         </div>
         <TabGroup
-          className="mt-1 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          className="mt-1 grid grid-cols-1 items-center gap-y-2 pt-0 sm:gap-y-6 md:mt-10 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
@@ -150,6 +153,24 @@ export function HowToBuy() {
             </>
           )}
         </TabGroup>
+        <div className="absolute top-[103%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce flex justify-center items-center">
+          <button
+            onClick={scrollToNextSection}
+            className="p-4 rounded-full transition-all duration-300 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+          >
+            <svg 
+              className="w-8 h-8 text-white"
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </button>
+        </div>
       </Container>
     </section>
   )

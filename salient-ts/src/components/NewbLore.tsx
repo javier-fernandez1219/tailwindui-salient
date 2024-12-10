@@ -14,7 +14,7 @@ const faqs = [
   ],
 ]
 
-export function Faqs() {
+export function NewbLore() {
   return (
     <section
       id="faq"
