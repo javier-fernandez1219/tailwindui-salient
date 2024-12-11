@@ -6,6 +6,10 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/paperbg.svg'
 import roadmapSvg from '@/images/roadmap.svg'
+import oneSupplySvg from '@/images/textfiles/1bsupply.svg'
+import contractRenouncedSvg from '@/images/textfiles/contractrenounced.svg'
+import liquidityLockedSvg from '@/images/textfiles/liquiditylocked.svg'
+import tokenomicsSvg from '@/images/textfiles/tokenomics.svg'
 
 export function Roadmap() {
   const [openPhase, setOpenPhase] = useState<number>(1)
@@ -31,11 +35,11 @@ export function Roadmap() {
         <Image 
           src={roadmapSvg}
           alt="Roadmap"
-          className="mx-auto mb-8"
+          className="ml-40 mb-8"
           width={800}
           height={200}
         />
-        <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
+        <ol className="relative border-s border-gray-200 dark:border-gray-700">
           <li className="mb-10 ms-6">            
               <button 
                 onClick={() => togglePhase(1)} 

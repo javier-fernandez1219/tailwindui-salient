@@ -31,6 +31,9 @@ export default {
       maxWidth: {
         '2xl': '40rem',
       },
+      spacing: {
+        '70': '17.5rem',
+      }
     },
   },
   plugins: [formsPlugin, headlessuiPlugin],

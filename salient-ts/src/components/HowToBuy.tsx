@@ -10,7 +10,7 @@ import screenshotWallet from '@/images/screenshots/wallet.gif'
 import screenshotSwap from '@/images/screenshots/swap.gif'
 import howbuynewb from '@/images/avatars/howbuynewb.svg'
 import pic from '@/images/screenshots/pic.png'
-import backgroundImage from '@/images/paperbg.svg'
+import backgroundImage from '@/images/textfiles/bg3.png'
 
 
 const features = [
