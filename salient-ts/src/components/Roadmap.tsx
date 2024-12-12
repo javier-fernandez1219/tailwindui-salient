@@ -4,25 +4,56 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/paperbg.svg'
+import backgroundImage from '@/images/bg4.png'
 import roadmapSvg from '@/images/roadmap.svg'
 import oneSupplySvg from '@/images/textfiles/1bsupply.svg'
 import contractRenouncedSvg from '@/images/textfiles/contractrenounced.svg'
 import liquidityLockedSvg from '@/images/textfiles/liquiditylocked.svg'
 import tokenomicsSvg from '@/images/textfiles/tokenomics.svg'
+import newbSkate from '@/images/newbskate.png'
 
 export function Roadmap() {
   const [openPhase, setOpenPhase] = useState<number>(1)
 
-  const togglePhase = (phaseNumber: number) => {
-    setOpenPhase(openPhase === phaseNumber ? 0 : phaseNumber)
-  }
+  const phases = [
+    {
+      number: 1,
+      title: "Launch & Community Building",
+      timing: "Initial Launch Phase",
+      content: [
+        "Fair launch on WAGMI.Best",
+        "Setup socials (Website V1, Twitter, Telegram, Discord, Reddit)",
+        "Run first marketing campaign (Dex Ads/Banner)",
+        "Airdrop $NEWB to Top Base communities (Alienbase, Brett, Toshi, Keycat, Moonwell)"
+      ]
+    },
+    {
+      number: 2,
+      title: "Growth & Recognition",
+      timing: "Marketing & Visibility Phase",
+      status: "current",
+      content: [
+        "Hire full time artist",
+        "List on Coin Gecko, Moontok, Coin Mooner",
+        "Update token information and rebrand logo on Basescan/CB wallet",
+        "Donate to STEM Education Charities at 1M, 2M, 10M Market Cap",
+        "Hire a full time Animator to make animations"
+      ]
+    },
+    {
+      number: 3,
+      title: "Expansion & Development",
+      timing: "Scaling & Innovation Phase",
+      content: [
+        "Establish an in-house scholarship fund that will partner with out 501c3 to administer yearly scholaryships for stem students at 200M Market Cap",
+        "Launch second marketing campaign (Youtubers/KOLS/Partnerships)",
+        "NEWB AI Virtual Protocol Agent",
+      ]
+    }
+  ]
 
   return (
-    <section
-      id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-8 h-screen"
-    >
+    <section className="relative overflow-hidden bg-blue-600 py-8 h-screen">
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={backgroundImage}
@@ -39,85 +70,69 @@ export function Roadmap() {
           width={800}
           height={200}
         />
-        <ol className="relative border-s border-gray-200 dark:border-gray-700">
-          <li className="mb-10 ms-6">            
-              <button 
-                onClick={() => togglePhase(1)} 
-                className="flex items-center w-full cursor-pointer"
-              >
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                    </svg>
-                </span>
-                <div>
-                  <h3 className="flex items-center mb-1 text-lg font-semibold text-white dark:text-white">
-                    Phase 1: Launch & Community Building 
-                    <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Current</span>
-                  </h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-white dark:text-white">Initial Launch Phase</time>
-                </div>
-              </button>
-              {openPhase === 1 && (
-                <p className="mb-4 text-base font-normal text-white mt-2">
-                  • Fair launch on WAGMI.Best<br/>
-                  • Setup socials (Website V1, Twitter, Telegram, Discord, Reddit)<br/>
-                  • Run first marketing campaign (Dex Ads/Banner)<br/>
-                  • Airdrop $NEWB to Top Base communities (Alienbase, Brett, Toshi, Keycat, Moonwell)
-                </p>
-              )}
-          </li>
-          <li className="mb-10 ms-6">
-              <button 
-                onClick={() => togglePhase(2)}
-                className="flex items-center w-full cursor-pointer"
-              >
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                    </svg>
-                </span>
-                <div>
-                  <h3 className="mb-1 text-lg font-semibold text-white dark:text-white">Phase 2: Growth & Recognition</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-white">Marketing & Visibility Phase</time>
-                </div>
-              </button>
-              {openPhase === 2 && (
-                <p className="text-base font-normal text-white dark:text-white mt-2">
-                  • Hire full time artist to make memes<br/>
-                  • List on Coin Gecko, Moontok, Coin mooner<br/>
-                  • Update token information and rebrand logo on Basescan/CB wallet
-                </p>
-              )}
-          </li>
-          <li className="ms-6">
-              <button 
-                onClick={() => togglePhase(3)}
-                className="flex items-center w-full cursor-pointer"
-              >
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                    </svg>
-                </span>
-                <div>
-                  <h3 className="mb-1 text-lg font-semibold text-white dark:text-white">Phase 3: Expansion & Development</h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-white">Scaling & Innovation Phase</time>
-                </div>
-              </button>
-              {openPhase === 3 && (
-                <p className="text-base font-normal text-white dark:text-white mt-2">
-                  • Begin Donating to STEM Education Charities at 1, 2, 5, 10 Million MC<br/>
-                  • Hire a full time Animator to make animations<br/>
-                  • Launch second marketing campaign (Youtubers/KOLS/Partnerships)<br/>
-                  • CMC Listing at 40 million MC<br/>
-                  • CEX Listings<br/>
-                  • NEWB AI Virtual Protocol Agent<br/>
-                  • RUG
-                </p>
-              )}
-          </li>
-        </ol>
+        
+        {/* Newb Skater */}
+        <Image 
+          src={newbSkate}
+          alt="Newb Skater"
+          className={`absolute top-[60%] transform -translate-y-1/2 z-20 scale-x-[-1] transition-all duration-500
+            ${openPhase === 1 ? 'left-[0%]' : ''}
+            ${openPhase === 2 ? 'left-[40%]' : ''}
+            ${openPhase === 3 ? 'left-[80%]' : ''}
+          `}
+          width={200}
+          height={100}
+        />
+        
+        {/* Timeline Road */}
+        <div className="relative mt-60">
+          {/* The Road Line */}
+          <div className="absolute w-full h-1 bg-white top-1/2 transform -translate-y-1/2" />
+          
+          {/* Phase Dots and Content */}
+          <div className="relative flex justify-between items-center">
+            {phases.map((phase) => (
+              <div key={phase.number} className="relative">
+                {/* Dot/Node */}
+                <button
+                  onClick={() => setOpenPhase(phase.number)}
+                  className={`w-8 h-8 rounded-full ${
+                    openPhase === phase.number
+                      ? 'bg-blue-300 ring-4 ring-white'
+                      : 'bg-white'
+                  } transition-all duration-300 relative z-10`}
+                >
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-white font-bold">
+                    {phase.number}
+                  </span>
+                </button>
+
+                {/* Phase Content - Shows when active */}
+                {openPhase === phase.number && (
+                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md rounded-lg p-6 w-[450px] shadow-xl">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {phase.title}
+                      {phase.status === 'current' && (
+                        <span className="ml-2 text-sm bg-blue-300 text-blue-800 px-2 py-1 rounded">
+                          Current
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-sm text-white/80 mb-4">{phase.timing}</p>
+                    <ul className="text-white space-y-2">
+                      {phase.content.map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="mr-2">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   )

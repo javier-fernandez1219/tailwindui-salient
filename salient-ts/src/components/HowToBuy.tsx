@@ -153,24 +153,6 @@ export function HowToBuy() {
             </>
           )}
         </TabGroup>
-        <div className="absolute top-[103%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce flex justify-center items-center">
-          <button
-            onClick={scrollToNextSection}
-            className="p-4 rounded-full transition-all duration-300 hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]"
-          >
-            <svg 
-              className="w-8 h-8 text-white"
-              fill="none" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </button>
-        </div>
       </Container>
     </section>
   )

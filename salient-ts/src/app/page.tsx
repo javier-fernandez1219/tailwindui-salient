@@ -19,11 +19,9 @@ export default function Home() {
         <HowToBuy />
       </div>
 
-      {/* Commented out Roadmap for now
       <div className="h-screen snap-start">
         <Roadmap />
       </div>
-      */}
 
       <div className="h-screen snap-start">
         <Donation />
