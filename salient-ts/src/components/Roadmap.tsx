@@ -36,7 +36,7 @@ export function Roadmap() {
         "Hire full time artist",
         "List on Coin Gecko, Moontok, Coin Mooner",
         "Update token information and rebrand logo on Basescan/CB wallet",
-        "Donate to STEM Education Charities at 1M, 2M, 10M Market Cap",
+        "Donate to STEM Education Charities at 1M, 2M, 5M 10M Market Cap",
         "Hire a full time Animator to make animations"
       ]
     },
@@ -45,9 +45,12 @@ export function Roadmap() {
       title: "Expansion & Development",
       timing: "Scaling & Innovation Phase",
       content: [
-        "Establish an in-house scholarship fund that will partner with out 501c3 to administer yearly scholaryships for stem students at 200M Market Cap",
         "Launch second marketing campaign (Youtubers/KOLS/Partnerships)",
-        "NEWB AI Virtual Protocol Agent",
+        "CMC Listing at 10M Market Cap",
+        "NEWB AI Virtual Protocol Agent at 25M Market Cap",
+        "CEX Listings at 50M Market Cap",
+        "Establish an in-house 501c3 foundation as a grant making verhicle for STEM non-profits at 100M Market Cap",
+        "Establish an in-house scholarship fund that will partner with out 501c3 to administer yearly scholarships for STEM students at 200M Market Cap",
       ]
     }
   ]
@@ -109,7 +112,7 @@ export function Roadmap() {
 
                 {/* Phase Content - Shows when active */}
                 {openPhase === phase.number && (
-                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md rounded-lg p-6 w-[450px] shadow-xl">
+                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-md rounded-lg p-6 w-[600px] shadow-xl">
                     <h3 className="text-xl font-bold text-white mb-2">
                       {phase.title}
                       {phase.status === 'current' && (
