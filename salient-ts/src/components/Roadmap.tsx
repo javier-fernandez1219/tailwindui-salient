@@ -122,11 +122,26 @@ export function Roadmap() {
                       )}
                     </h3>
                     <p className="text-sm text-white/80 mb-4">{phase.timing}</p>
-                    <ul className="text-white space-y-2">
+                    <ul className={`${phase.number === 1 || phase.number === 2 ? 'text-green-300' : phase.number === 3 ? 'text-blue-300' : 'text-white'} space-y-2`}>
                       {phase.content.map((item, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="mr-2">•</span>
-                          {item}
+                          <span className="mr-2">
+                            {item === "Hire a full time Animator to make animations" || 
+                             item === "Donate to STEM Education Charities at 1M, 2M, 5M 10M Market Cap" ||
+                             item === "Launch second marketing campaign (Youtubers/KOLS/Partnerships)" ? '⏳' : 
+                             (phase.number === 1 || phase.number === 2 ? '✅' : 
+                              phase.number === 3 ? '🎯' : '•')}
+                          </span>
+                          {item === "Donate to STEM Education Charities at 1M, 2M, 5M 10M Market Cap" ? (
+                            <span>
+                              Donate to STEM Education Charities at 1M, 2M <span className="text-yellow-300"> 5M 10M</span> Market Cap
+                            </span>
+                          ) : (
+                            <span className={item === "Hire a full time Animator to make animations" ||
+                                           item === "Launch second marketing campaign (Youtubers/KOLS/Partnerships)" ? 'text-yellow-300' : ''}>
+                              {item}
+                            </span>
+                          )}
                         </li>
                       ))}
                     </ul>
