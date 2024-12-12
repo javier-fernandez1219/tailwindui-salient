@@ -24,6 +24,9 @@ export function Donation() {
           <h2 className="font-chenile text-3xl tracking-tight text-white sm:text-6xl">
             Supporting STEM Education
           </h2>
+          <h3 className="mt-2 text-xl text-white/60">
+            (Science Technology Engineering Mathematics)
+          </h3>
           <p className="mt-4 text-3xl text-white">
             NEWB is proud to support Lumity! A STEM nonprofit building a future where STEM education 
             is more equitable, accessible, and uplifting for Chicago's under-resourced students.
@@ -39,7 +42,7 @@ export function Donation() {
           />
         </div>
 
-        <div className="mt-80 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+        <div className="mt-60 rounded-2xl border border-slate-200 bg-slate-50 p-8">
           <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
             <div className="max-w-4xl">
               <Image

@@ -10,7 +10,7 @@ import { Donation } from '@/components/Donation'
 
 export default function Home() {
   return (
-    <main className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+    <main className="h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scroll-smooth">
       <div className="h-screen snap-start">
         <Hero />
       </div>
