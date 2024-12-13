@@ -33,16 +33,17 @@ export function Donation() {
           </p>
         </div>
 
-        <div className="absolute left-1/2 top-1/3 -translate-x-1/2">
+        <div className="flex justify-center mt-8">
           <Image 
             src={newbAlienPng}
             alt="Newb Alien"
             width={400}
             height={400}
+            className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
           />
         </div>
 
-        <div className="mt-60 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-8">
           <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
             <div className="max-w-4xl">
               <Image
