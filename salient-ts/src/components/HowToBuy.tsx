@@ -12,7 +12,6 @@ import howbuynewb from '@/images/avatars/howbuynewb.svg'
 import pic from '@/images/screenshots/pic.png'
 import backgroundImage from '@/images/textfiles/bg3.png'
 
-
 const features = [
   {
     title: 'Download a Coinbase Wallet',
@@ -54,20 +53,14 @@ export function HowToBuy() {
     }
   }, [])
 
-  const scrollToNextSection = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const nextSection = document.getElementById('next-section');
-    nextSection?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 py-8 h-screen"
+      className="relative overflow-hidden bg-blue-600 py-4 sm:py-6 md:py-8 min-h-screen"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
         src={backgroundImage}
         alt=""
         width={2347}
@@ -75,17 +68,17 @@ export function HowToBuy() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none font-['Chenile_Deluxe'] -mt-8">
+        <div className="max-w-2xl mx-auto text-center xl:max-w-none font-['Chenile_Deluxe'] mt-4 sm:mt-0 mb-16 sm:mb-16 md:mb-16 lg:mb-8">
           <Image 
             src={howbuynewb}
             alt="How to buy NEWB"
             width={1000}
             height={400}
-            className="mx-auto"
+            className="mx-auto w-full max-w-[80%] sm:max-w-[60%] md:max-w-[50%]"
           />
         </div>
         <TabGroup
-          className="mt-1 grid grid-cols-1 items-center gap-y-2 pt-0 sm:gap-y-6 md:mt-10 lg:grid-cols-12 lg:pt-0"
+          className="mt-4 sm:mt-6 md:mt-8 grid grid-cols-1 items-center gap-y-2 pt-0 sm:gap-y-6 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
@@ -96,7 +89,7 @@ export function HowToBuy() {
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
+                        'group relative rounded-full px-3 py-1 sm:px-4 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
                           ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
                           : 'hover:bg-white/10 lg:hover:bg-white/5',
@@ -105,7 +98,7 @@ export function HowToBuy() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-["Chenile_Deluxe"] text-2xl ui-not-focus-visible:outline-none',
+                            'font-["Chenile_Deluxe"] text-lg sm:text-xl md:text-2xl ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
                               ? 'text-blue-600 lg:text-white'
                               : 'text-blue-100 hover:text-white lg:text-white',
@@ -134,13 +127,13 @@ export function HowToBuy() {
                   <TabPanel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                      <p className="relative mx-auto max-w-2xl text-sm sm:text-base text-white sm:text-center px-4 sm:px-0">
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-24 sm:mt-24 md:mt-24 lg:mt-0 w-full max-w-[45rem] mx-auto overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 mb-12 sm:mb-8 lg:mb-0">
                       <Image
-                        className="w-full"
+                        className="w-full h-auto"
                         src={feature.image}
                         alt=""
                         priority
