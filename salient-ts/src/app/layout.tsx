@@ -8,10 +8,26 @@ import './globals.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - NEWB',
-    default: '$NEWB - The Next Generation of DeFi',
+    default: 'Newton On Base',
   },
   description:
-    'Most DeFi projects are built on top of Ethereum. We are building on top of Solana.',
+    'NEWB is the memecoin inspired by the brilliance of Isaac Newton and his groundbreaking laws of motion. Motivated to give back and help fund STEM Education!',
+  openGraph: {
+    title: 'NEWB',
+    description: 'NEWB, the memecoin inspired by the brilliance of Isaac Newton and his groundbreaking laws of motion. Motivated to give back and help fund STEM Education!',
+    images: [{
+      url: '/fonts/newtononbasemetadata.png',
+      width: 1200,
+      height: 630,
+      alt: 'NEWB'
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEWB',
+    description: 'NEWB, the memecoin inspired by the brilliance of Isaac Newton and his groundbreaking laws of motion. Motivated to give back and help fund STEM Education!',
+    images: ['/fonts/newtononbasemetadata.png'],
+  }
 }
 
 const inter = Inter({
