@@ -16,7 +16,7 @@ const features = [
   {
     title: 'Download a Coinbase Wallet',
     description:
-      'Get started with crypto by signing up for Coinbase Wallet. Make sure to store your wallet information in a safe place where you will not lose it. We reccommend Coinbase Wallet for its user friendliness and security.',
+      'Get started with crypto by signing up for Coinbase Wallet. Make sure to store your wallet information in a safe place where you will not lose it. We recommend Coinbase Wallet for its user friendliness and security.',
     image: screenshotWallet,
   },
   {
